@@ -186,7 +186,8 @@ class LDAPAttack(ProtocolAttack):
             alreadyAddedComputer = True
             # Return the SAM name
             return newComputer
-
+        if self.client.result['result'] != RESULT_INSUFFICIENT_ACCESS_RIGHTS:
+            alreadyAddedComputer = False
         LOG.error('Failed to add a new computer: %s' % str(self.client.result))
 
         # If error is RESULT_INSUFFICIENT_ACCESS_RIGHTS or an exceeded Machine Account Quota, and if we're relaying a machine account,
