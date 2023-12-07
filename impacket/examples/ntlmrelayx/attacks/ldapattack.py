@@ -1192,7 +1192,7 @@ class LDAPAttack(ProtocolAttack):
                     if b"AA312825768811D1ADED00C04FD8D5CD" in entry
                 ][0]
             elif self.config.computercontainer is not None:
-                computerscontainer = self.config.computerscontainer
+                computerscontainer = self.config.computercontainer
             LOG.debug("Computer container is {}".format(computerscontainer))
             self.addComputer(computerscontainer, domainDumper)
             return
