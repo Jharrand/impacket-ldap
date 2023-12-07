@@ -183,13 +183,14 @@ class NTLMRelayxConfig:
     def setRandomTargets(self, randomtargets):
         self.randomtargets = randomtargets
 
-    def setLDAPOptions(self, dumpdomain, addda, aclattack, validateprivs, escalateuser, addcomputer, delegateaccess, dumplaps, dumpgmsa, dumpadcs, sid, adddnsrecord):
+    def setLDAPOptions(self, dumpdomain, addda, aclattack, validateprivs, escalateuser, addcomputer, computercontainer, delegateaccess, dumplaps, dumpgmsa, dumpadcs, sid, adddnsrecord):
         self.dumpdomain = dumpdomain
         self.addda = addda
         self.aclattack = aclattack
         self.validateprivs = validateprivs
         self.escalateuser = escalateuser
         self.addcomputer = addcomputer
+        self.computercontainer = computercontainer
         self.delegateaccess = delegateaccess
         self.dumplaps = dumplaps
         self.dumpgmsa = dumpgmsa
