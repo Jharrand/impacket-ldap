@@ -1191,7 +1191,7 @@ class LDAPAttack(ProtocolAttack):
                     entry.decode('utf-8').split(":")[-1] for entry in self.client.entries[0]["wellKnownObjects"]
                     if b"AA312825768811D1ADED00C04FD8D5CD" in entry
                 ][0]
-            elif
+            elif self.config.computercontainer is not None:
                 computerscontainer = self.config.computerscontainer
             LOG.debug("Computer container is {}".format(computerscontainer))
             self.addComputer(computerscontainer, domainDumper)
